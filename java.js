@@ -28,25 +28,26 @@ function playerSelection () {
 }
 
 
-
-
 //Function that covers a whole round, it lets you know if you win or lose, and also if you wrote something wrong.
 
 
-let playerScore = 0;
-let computerScore = 0;
+
+
 
 function round () {
-
-    let computerPick = computerSelection();
+    let playerScore = 0;
+    let computerScore = 0;
     let playerPick = playerSelection();
+    let computerPick = computerSelection();
 
         if ((playerPick === "scissors" && computerPick === "paper") || (playerPick === "paper" && computerPick === "rock") || (playerPick === "rock" && computerPick === "scissors")){
-            alert("You win this round!");          
+            alert("You win this round!");    
+            playerScore++;      
         }
 
         else if ((computerPick === "scissors" && playerPick === "paper") || (computerPick === "paper" && playerPick === "rock") || (computerPick === "rock" && playerPick === "scissors")){
             alert("You lost this round!");
+            computerScore++;
         }
 
         else if ((playerPick === "scissors" && computerPick === "scissors") || (playerPick === "paper" && computerPick === "paper") || (playerPick === "rock" && computerPick === "rock")){
@@ -57,64 +58,43 @@ function round () {
             alert("Invalid input");
             }
 
-        let playerScore = 0;
-        let computerScore = 0;
+
         if ((playerPick === "scissors" && computerPick === "paper") || (playerPick === "paper" && computerPick === "rock") || (playerPick === "rock" && computerPick === "scissors")){
-            
-            let newPlayerScore = playerScore + 1;
-            let newComputerScore = computerScore * 1;
-            console.log(newPlayerScore);
-            console.log(newComputerScore);
-            return {
-                newComputerScore,
-                newPlayerScore
-            };
+            console.log("Nice one, you made " + playerScore + " point!");
+
         }
 
         else if ((computerPick === "scissors" && playerPick === "paper") || (computerPick === "paper" && playerPick === "rock") || (computerPick === "rock" && playerPick === "scissors")){
-            let newPlayerScore = playerScore * 1;
-            let newComputerScore = computerScore + 1;
-            console.log(newPlayerScore);
-            console.log(newComputerScore);
-            return {
-                newComputerScore,
-                newPlayerScore
-            };
+            console.log("The computer made " + computerScore + " point");
+
         }
 
         else if ((playerPick === "scissors" && computerPick === "scissors") || (playerPick === "paper" && computerPick === "paper") || (playerPick === "rock" && computerPick === "rock")){
-            let newPlayerScore = playerScore * 1;
-            let newComputerScore = computerScore * 1;
-            console.log(newPlayerScore);
-            console.log(newComputerScore);
-            return {
-                newComputerScore,
-                newPlayerScore
-            };
+            console.log("I\'ll keep the point to myself, you both suck");
         }
+        console.log("Player points: " + playerScore);
+        console.log("Computer points: " + computerScore);
 
     }
 
-
-
-round();
-
-
-
-
-
-/*
 function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++)
 
-        for (let i = 1; i <= (playerScore === 5 || computerScore === 5); i++);
-            round();
 
-            if (playerScore === 5) {
-                alert("You win the game!");
-            } else (computerScore === 5); {
-                alert("You lost the game!");
-            }
+
+    round();
+    if (playerScore == 5) {
+        console.log("You won the game, congrats!");
+        playerScore = 0;
+        computerScore = 0;
     }
-*/
+    else if (computerScore == 5) {
+        console.log("You suck at this, go do something else");
+        playerScore = 0;
+        computerScore = 0;
+    }
+}
 
-
+game();
