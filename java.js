@@ -37,36 +37,65 @@ let playerScore = 0;
 let computerScore = 0;
 
 function round () {
+
     let computerPick = computerSelection();
     let playerPick = playerSelection();
+
         if ((playerPick === "scissors" && computerPick === "paper") || (playerPick === "paper" && computerPick === "rock") || (playerPick === "rock" && computerPick === "scissors")){
             alert("You win this round!");          
-            return {
-                computerScore,
-                playerScore
-            };
         }
 
         else if ((computerPick === "scissors" && playerPick === "paper") || (computerPick === "paper" && playerPick === "rock") || (computerPick === "rock" && playerPick === "scissors")){
             alert("You lost this round!");
-            return {
-                computerScore,
-                playerScore
-            };
         }
 
         else if ((playerPick === "scissors" && computerPick === "scissors") || (playerPick === "paper" && computerPick === "paper") || (playerPick === "rock" && computerPick === "rock")){
             alert("It\'s a tie!");
-            return {
-                computerScore,
-                playerScore
-            };
         }
        
         else {
             alert("Invalid input");
             }
+
+        let playerScore = 0;
+        let computerScore = 0;
+        if ((playerPick === "scissors" && computerPick === "paper") || (playerPick === "paper" && computerPick === "rock") || (playerPick === "rock" && computerPick === "scissors")){
+            
+            let newPlayerScore = playerScore + 1;
+            let newComputerScore = computerScore * 1;
+            console.log(newPlayerScore);
+            console.log(newComputerScore);
+            return {
+                newComputerScore,
+                newPlayerScore
+            };
         }
+
+        else if ((computerPick === "scissors" && playerPick === "paper") || (computerPick === "paper" && playerPick === "rock") || (computerPick === "rock" && playerPick === "scissors")){
+            let newPlayerScore = playerScore * 1;
+            let newComputerScore = computerScore + 1;
+            console.log(newPlayerScore);
+            console.log(newComputerScore);
+            return {
+                newComputerScore,
+                newPlayerScore
+            };
+        }
+
+        else if ((playerPick === "scissors" && computerPick === "scissors") || (playerPick === "paper" && computerPick === "paper") || (playerPick === "rock" && computerPick === "rock")){
+            let newPlayerScore = playerScore * 1;
+            let newComputerScore = computerScore * 1;
+            console.log(newPlayerScore);
+            console.log(newComputerScore);
+            return {
+                newComputerScore,
+                newPlayerScore
+            };
+        }
+
+    }
+
+
 
 round();
 
