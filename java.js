@@ -1,10 +1,10 @@
 //I'll need a few functions, a computerSelection, a playerSelection that's case sensitive, both will make a round, five of those will make a game//
 
-/*Introduction to the game
+//Introduction to the game
 let firstIntroduction = alert("The game is simple, win 5 rounds to win a game")
 let secondIntroduction = alert("May the better person win. Good luck")
-let thirdIntroduction = alert("El que pierde es trolo")
-*/
+let thirdIntroduction = alert("Press F12 and go to console")
+
 
 //Function that picks randomly between the elements of an Array//
 
