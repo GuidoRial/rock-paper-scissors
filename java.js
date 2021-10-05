@@ -70,14 +70,16 @@ function round () {
     let playerScore = 0;
     let computerScore = 0;
 
-    while ((computerScore < 5) || (playerScore <5)) {
+    while ((computerScore < 5) && (playerScore < 5)) {
         let playerScore = 0;
         let computerScore = 0;
         round();
-        if (playerScore == 5) {
-            console.log("You won the game, congrats!");
-        }
-        else if (computerScore == 5) {
-            console.log("You suck at this, go do something else");
-        }
+
+    }
+
+    if (computerScore == 5) {
+        alert("you lost, go do something else");
+    }
+    else if (playerScore == 5) {
+        alert("you won, congrats!");
     }
