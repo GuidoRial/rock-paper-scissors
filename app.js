@@ -1,11 +1,3 @@
-/*Introduction to the game
-let firstIntroduction = alert("The game is simple, win 5 rounds to win a game")
-let secondIntroduction = alert("May the better person win. Good luck")
-let thirdIntroduction = alert("Press F12 and go to console")
-*/
-
-//Function that picks randomly between the elements of an Array//
-
 let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
@@ -16,12 +8,14 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
+//Function that picks randomly between the elements of an Array//
 function computerSelection () {
     const computerChoises = ["rock", "paper", "scissors"];
     let computerPick = computerChoises[Math.floor(Math.random() * computerChoises.length)];
     return computerPick;
 }
 
+//functions for winning and losing the round and game//
 function win (userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
@@ -94,4 +88,3 @@ function main() {
 }
 
 main();
-
