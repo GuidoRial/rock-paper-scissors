@@ -37,12 +37,16 @@ function draw (userChoice, computerChoice) {
 function winGame () {
     userScore = 0;
     computerScore = 0;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = "You won the game!";    
 }
 
 function loseGame () {
     userScore = 0;
     computerScore = 0;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = "You lost the game!";    
 }
 
