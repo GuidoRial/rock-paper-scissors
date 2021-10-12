@@ -4,14 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="java.js"></script>
+
+    <link rel="stylesheet" href="style.css">
     <title>Rock, paper, scissors</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Rock paper scissors</h1>
+    </header>
+
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>Win 5 rounds to win the game</p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="../rock-paper-scissors/img/rock.png" alt="rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="../rock-paper-scissors/img/paper.png" alt="paper">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="../rock-paper-scissors/img//scissors.png" alt="scissors">
+        </div>
+    </div>
+
+    <p id="action-message">May the better person win.</p>
 
 
-
-
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
